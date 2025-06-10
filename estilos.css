@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #eaf7e9;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(to right, #b4eeb7, #66bb6a);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+header img {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+p{
+    color:#000;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+nav {
+  background: #9ceca0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+nav a:hover {
+  background: #2e7d32;
+}
+
+section {
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+  background: white;
+  margin-top: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+.section-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.section-flex img {
+  max-width: 100%;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.section-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+footer {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Estilo del botón de progreso */
+#scroll-progress {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
+
+#scroll-progress svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+#scroll-progress polygon {
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+.section-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch; /* 🔁 Esta línea asegura misma altura */
+  gap: 2rem;
+  justify-content: center;
+}
+
+.plant-card {
+  background-color: #f0fff0;
+  border: 2px solid #b4eeb7;
+  border-radius: 15px;
+  padding: 2rem;
+  flex: 1 1 300px; /* 🔁 Esto asegura que ambos crezcan igual */
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 🔁 Distribuye bien el contenido */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.plant-card h2 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.plant-card ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
