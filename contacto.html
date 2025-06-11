@@ -4,31 +4,50 @@
   <meta charset="UTF-8" />
   <title>Contacto</title>
   <link rel="stylesheet" href="estilos.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
   <header>
+    <img src="img/logo.png" alt="Logo Reforestación">
     <h1>💌 Contacto</h1>
   </header>
+
   <nav>
     <a href="index.html">Inicio</a>
-    <a href="antecedentes.html">Antecedentes</a>
+    <a href="antecedentes.html">Beneficios</a>
     <a href="kits.html">Kits</a>
+    <a href="Tipo.html">Tipo de Árboles</a>
     <a href="plantar.html">Cómo Plantar</a>
-    <a href="contacto.html">Contacto</a>
+    <a href="contacto.html" class="active">Contacto</a>
     <a href="encuesta.html">Encuesta</a>
   </nav>
-  <main>
 
-    <section>
+  <main>
+    <!-- Sección con clase visible para activar animación -->
+    <section class="visible">
       <h2>Información de contacto</h2>
       <p><strong>Centro de Enseñanza Técnica Industrial - Tonalá</strong></p>
-      <p>Email: a25110016@ceti.mx</p>
-      <p>Email: a25110017@ceti.mx</p>
+    <p>✉️ <a href="mailto:a25110016@ceti.mx">a25110016@ceti.mx</a></p>
+    <p>✉️ <a href="mailto:a25110017@ceti.mx">a25110017@ceti.mx</a></p>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 Reforestación Urbana</p>
   </footer>
+
+  <!-- Botón de progreso de scroll -->
+  <div id="scroll-progress">
+    <svg viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="54" stroke="#ccc" stroke-width="8" fill="none" />
+      <circle id="scroll-path" cx="60" cy="60" r="54" stroke="#2e7d32" stroke-width="8"
+        fill="none" stroke-linecap="round"
+        stroke-dasharray="339.29" stroke-dashoffset="339.29" />
+      <polygon points="60,35 50,60 70,60" fill="#2e7d32" />
+    </svg>
+  </div>
+
+  <!-- Script para activar animación si no se usa la clase visible directamente -->
+<script src="script.js"></script>
 </body>
 </html>
-<script src="script.js"></script>
