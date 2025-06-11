@@ -1,51 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Antecedentes</title>
+  <meta charset="UTF-8">
+  <title>Inicio - Reforestación Urbana</title>
   <link rel="stylesheet" href="estilos.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
+  <header>
+    <img src="img/logo.png" alt="Logo Reforestación">
+    <h1>🌳 Reforestación Urbana</h1>
+    <p>Planta vida, siembra futuro</p>
+  </header>
 
-<header>
-  <img src="img/logo.png" alt="Logo Reforestación">
-  <h1>🔄 Antecedentes</h1>
-  <p>Conoce el origen de esta iniciativa en Tonalá</p>
-</header>
-
-<nav>
-    <a href="index.html">Inicio</a>
-    <a href="antecedentes.html">Antecedentes</a>
+  <nav>
+    <a href="index.html" class="active">Inicio</a>
+    <a href="antecedentes.html">Beneficios</a>
     <a href="kits.html">Kits</a>
+    <a href="Tipo.html">Tipo de Árboles</a>
     <a href="plantar.html">Cómo Plantar</a>
     <a href="contacto.html">Contacto</a>
     <a href="encuesta.html">Encuesta</a>
-</nav>
+  </nav>
 
-<section class="section-flex visible">
-  <div class="section-text">
-    <h2>🔄 Antecedentes</h2>
-    <p>En Tonalá, la expansión urbana ha traído consigo una disminución considerable de áreas verdes. Ante esta situación, organizaciones locales y estudiantes han impulsado acciones de reforestación en parques, camellones y escuelas, fomentando la participación ciudadana y el respeto por el entorno natural.</p>
+  <main>
+    <!-- Secciones con animación activada -->
+    <section class="visible">
+      <h2>🌍 ¿Qué es la Reforestación Urbana?</h2>
+      <p>La reforestación urbana es el proceso de plantar árboles y vegetación en zonas urbanas, como calles, parques, plazas y avenidas. Su objetivo principal es mejorar la calidad del ambiente en las ciudades y hacer que los espacios urbanos sean más saludables y agradables para las personas.</p>
+    </section>
+
+    <section class="visible">
+      <h2>🌱 Beneficios de la Reforestación Urbana</h2>
+      <p>La reforestación urbana mejora la calidad del aire, reduce el calor urbano, fomenta la biodiversidad y embellece nuestras ciudades. Además, crea conciencia ecológica en la comunidad y mejora la salud física y mental de las personas.</p>
+    </section>
+
+    <section class="visible">
+      <h2>🎯 Objetivo General</h2>
+      <p>Fomentar la reforestación urbana de manera participativa y sostenible, mediante la distribución de kits completos que incluyan árboles jóvenes, tierra y guías de cuidado, con el fin de involucrar a la comunidad en la plantación, cuidado y conservación de árboles en espacios públicos y privados de zonas urbanas, contribuyendo así a la mejora del entorno urbano, la calidad del aire, la biodiversidad local y la creación de conciencia ambiental en los habitantes.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Reforestación Urbana</p>
+  </footer>
+
+  <!-- Botón de progreso de scroll -->
+  <div id="scroll-progress">
+    <svg viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="54" stroke="#ccc" stroke-width="8" fill="none" />
+      <circle id="scroll-path" cx="60" cy="60" r="54" stroke="#2e7d32" stroke-width="8"
+        fill="none" stroke-linecap="round"
+        stroke-dasharray="339.29" stroke-dashoffset="339.29" />
+      <polygon points="60,35 50,60 70,60" fill="#2e7d32" />
+    </svg>
   </div>
-  <img src="img/Reforest.png" alt="Reforestación Tonalá">
-</section>
 
-<footer>
-  <p>&copy; 2025 Reforestación Urbana. Plantando conciencia, cosechando futuro.</p>
-</footer>
-
-<div id="scroll-progress">
-  <svg viewBox="0 0 120 120">
-    <circle cx="60" cy="60" r="54" stroke="#ccc" stroke-width="8" fill="none" />
-    <circle id="scroll-path" cx="60" cy="60" r="54" stroke="#2e7d32" stroke-width="8"
-      fill="none" stroke-linecap="round"
-      stroke-dasharray="339.29" stroke-dashoffset="339.29" />
-    <polygon points="60,35 50,60 70,60" fill="#2e7d32" />
-  </svg>
-</div>
-
-<script src="script.js"></script>
+  <!-- Script para animación + progreso scroll -->
+  <script src="script.js"></script>
 </body>
 </html>
+
