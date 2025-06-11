@@ -2,29 +2,51 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Encuesta</title>
   <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="encuesta.css" />
 </head>
 <body>
   <header>
+    <img src="img/logo.png" alt="Logo Reforestación" />
     <h1>📝 Encuesta</h1>
   </header>
+
   <nav>
     <a href="index.html">Inicio</a>
-    <a href="antecedentes.html">Antecedentes</a>
+    <a href="antecedentes.html">Beneficios</a>
     <a href="kits.html">Kits</a>
+    <a href="Tipo.html">Tipo de Arboles</a>
     <a href="plantar.html">Cómo Plantar</a>
     <a href="contacto.html">Contacto</a>
     <a href="encuesta.html">Encuesta</a>
   </nav>
+
   <main>
-    <section>
-      <p>Próximamente podrás responder una encuesta para ayudarnos a mejorar nuestros kits de reforestación y talleres.</p>
+    <section class="visible">
+      <p>Te invitamos a responder la siguiente encuesta</p>
+      <div class="encuesta-card">
+        <h2>Encuesta de Reforestación</h2>
+        <p>¡Queremos conocer tu opinión! Ayúdanos respondiendo esta breve encuesta para mejorar nuestros servicios.</p>
+        <a href="https://forms.gle/gp8t1tDcQGBAZNLN7" target="_blank" class="btn-encuesta">Responder Encuesta</a>
+      </div>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 Reforestación Urbana</p>
   </footer>
+
+  <div id="scroll-progress">
+    <svg viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="54" stroke="#ccc" stroke-width="8" fill="none" />
+      <circle id="scroll-path" cx="60" cy="60" r="54" stroke="#2e7d32" stroke-width="8" fill="none" stroke-linecap="round"
+        stroke-dasharray="339.29" stroke-dashoffset="339.29" />
+      <polygon points="60,35 50,60 70,60" fill="#2e7d32" />
+    </svg>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-<script src="script.js"></script>

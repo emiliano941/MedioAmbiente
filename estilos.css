@@ -19,14 +19,18 @@ header {
 }
 
 header img {
-  width: 100px;
+  display: block;                /* Hace que el logo se comporte como bloque */
+  margin: 0 auto 1rem auto;      /* Centrado horizontal + margen inferior */
+  width: 100px;                  /* Tamaño del logo */
+}
+
+
+p {
+  color: #000;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
-p{
-    color:#000;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
+
 nav {
   background: #9ceca0;
   display: flex;
@@ -42,7 +46,7 @@ nav a {
 }
 
 nav a:hover {
-  background: #2e7d32;
+  background: #2e7d32; /* Hover más oscuro */
 }
 
 section {
@@ -52,7 +56,7 @@ section {
   background: white;
   margin-top: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   opacity: 0;
   transform: translateY(40px);
   transition: all 1s ease;
@@ -74,21 +78,27 @@ ul li {
 
 .section-flex {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: row; /* para que sea horizontal */
+  align-items: flex-start; /* alinea arriba */
   gap: 2rem;
-}
-
-.section-flex img {
-  max-width: 100%;
-  border-radius: 10px;
-  flex: 1;
-  min-width: 300px;
+  justify-content: center;
 }
 
 .section-text {
   flex: 1;
   min-width: 300px;
+  text-align: left;   /* alinea texto a la izquierda */
+  margin: 0 auto;     /* centra bloque texto */
+  max-width: 700px;   /* limita ancho texto */
+}
+
+.small-text {
+  font-size: 0.9rem;
+}
+
+.small-text p,
+.small-text li {
+  font-size: 0.9rem;
 }
 
 footer {
@@ -121,31 +131,24 @@ footer {
   transform: rotate(90deg);
   transform-origin: center;
 }
-.section-flex {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch; /* 🔁 Esta línea asegura misma altura */
-  gap: 2rem;
-  justify-content: center;
-}
 
 .plant-card {
-  background-color: #f0fff0;
-  border: 2px solid #b4eeb7;
+  background-color: #fff;            /* Fondo blanco */
+  border: 2px solid #ddd;            /* Borde gris claro */
   border-radius: 15px;
   padding: 2rem;
-  flex: 1 1 300px; /* 🔁 Esto asegura que ambos crezcan igual */
+  flex: 1 1 300px;
   max-width: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* 🔁 Distribuye bien el contenido */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .plant-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .plant-card h2 {
@@ -156,4 +159,77 @@ footer {
 .plant-card ul li {
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
+}
+
+section.visible img {
+  max-width: 60%;        /* Para que sea responsive */
+  height: auto;           /* Mantiene la proporción */
+  display: block;         /* Evita espacio extra debajo de la imagen */
+  margin: 20px auto;      /* Centra la imagen y da espacio alrededor */
+  border-radius: 16px;    /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Sombra suave */
+  transition: transform 0.3s ease;  /* Animación para efectos */
+}
+
+section.visible img:hover {
+  transform: scale(1.05); /* Pequeño zoom al pasar el cursor */
+}
+
+.cuadrada {
+  width: 500px;          /* tamaño cuadrado */
+  height: 300px;
+  object-fit: cover;     /* mantiene proporción y rellena */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+}
+
+/* Imágenes adaptativas */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Media Queries para Responsividad */
+
+/* Navegación y elementos en móviles (menos de 600px) */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    padding: 0.8rem 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .cuadrada {
+    width: 100%;
+    height: auto;
+  }
+
+  .plant-card {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+/* Cambia la sección flex a columna en tablets y móviles (menos de 800px) */
+@media (max-width: 800px) {
+  .section-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img.derecha,
+  .section-text {
+    max-width: 100%;
+  }
+
+  .img.derecha {
+    margin-top: 1rem;
+  }
 }

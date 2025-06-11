@@ -1,0 +1,29 @@
+.section-flex {
+  display: flex;
+  flex-direction: column;   /* Apilar contenido verticalmente */
+  align-items: center;      /* Centrar horizontalmente */
+  min-height: 350px;        /* Altura mínima para dar espacio */
+  padding: 20px;            /* Espacio interior */
+  box-sizing: border-box;
+}
+
+.section-text {
+  width: 100%;              /* Ocupa todo el ancho disponible */
+  max-width: 700px;         /* Opcional: limitar ancho del texto */
+}
+
+/* Imagen ajustada para pantallas grandes */
+.cuadrada {
+  max-width: 35%;           /* Ajusta el tamaño de la imagen */
+  height: auto;
+  margin-top: auto;         /* Empuja la imagen hacia abajo */
+  display: block;
+}
+
+/* Responsividad: en pantallas pequeñas (menos de 800px) */
+@media (max-width: 800px) {
+  .cuadrada {
+    max-width: 80%;        /* Imagen más grande y usable en móviles */
+    margin-top: 1rem;      /* Separación arriba */
+  }
+}

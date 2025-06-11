@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cómo Plantar</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="estilos.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <img src="img/logo.png" alt="Logo Reforestación">
-    <h1>🌳 Cómo Plantar y Cuidar</h1>
-  </header>
 
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="antecedentes.html">Antecedentes</a>
-    <a href="kits.html">Kits</a>
-    <a href="plantar.html">Cómo Plantar</a>
-    <a href="contacto.html">Contacto</a>
-    <a href="encuesta.html">Encuesta</a>
-  </nav>
+<header>
+  <img src="img/logo.png" alt="Logo Reforestación">
+  <h1>🌱 Cómo Plantar</h1>
+  <p>Conoce los árboles disponibles para plantar en tu comunidad</p>
+</header>
 
-  <section class="section-flex visible">
-    <div class="plant-card">
-      <h2>🌸 Jacarandá</h2>
-      <ul>
-        <li><strong>Luz:</strong> Pleno sol</li>
-        <li><strong>Riego:</strong> 2-3 veces por semana</li>
-        <li><strong>Beneficios:</strong> Sombra, flores vistosas, apoya polinizadores</li>
-      </ul>
-    </div>
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="antecedentes.html">Beneficios</a>
+  <a href="kits.html">Kits</a>
+  <a href="plantar.html">Cómo Plantar</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="encuesta.html">Encuesta</a>
+</nav>
 
-    <div class="plant-card">
-      <h2>🍌 Guayabo</h2>
-      <ul>
-        <li><strong>Luz:</strong> Sol o semisombra</li>
-        <li><strong>Riego:</strong> Frecuente, evitando encharcamientos</li>
-        <li><strong>Beneficios:</strong> Fruta comestible, biodiversidad local</li>
-      </ul>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Reforestación Urbana</p>
-  </footer>
-
-  <div id="scroll-progress">
-    <svg viewBox="0 0 120 120">
-      <circle cx="60" cy="60" r="54" stroke="#ccc" stroke-width="8" fill="none" />
-      <circle id="scroll-path" cx="60" cy="60" r="54" stroke="#2e7d32" stroke-width="8"
-        fill="none" stroke-linecap="round"
-        stroke-dasharray="339.29" stroke-dashoffset="339.29" />
-      <polygon points="60,35 50,60 70,60" fill="#2e7d32" />
-    </svg>
+<section class="section-flex visible">
+  <div class="plant-card small-text">
+    <h2>🌸 Jacarandá</h2>
+    <ul>
+      <li><strong>Tipo:</strong> Árbol ornamental</li>
+      <li><strong>Altura:</strong> 8 a 15 metros</li>
+      <li><strong>Floración:</strong> Flores lilas en primavera</li>
+      <li><strong>Beneficio:</strong> Sombra y belleza urbana</li>
+    </ul>
+    <video controls class="plant-video">
+      <source src="img/Guia para plantar una Jacaranda.mp4" type="video/mp4">
+      Tu navegador no soporta la etiqueta de video.
+    </video>
   </div>
 
-  <script src="script.js"></script>
+  <div class="plant-card small-text">
+    <h2>🍈 Guayabo</h2>
+    <ul>
+      <li><strong>Tipo:</strong> Árbol frutal</li>
+      <li><strong>Altura:</strong> 2 a 10 metros</li>
+      <li><strong>Fruto:</strong> Guayaba rica en vitamina C</li>
+      <li><strong>Beneficio:</strong> Alimenticio y medicinal</li>
+    </ul>
+    <video controls class="plant-video">
+      <source src="img/Guía del guayabo ‐ Hecho con Clipchamp.mp4" type="video/mp4">
+      Tu navegador no soporta la etiqueta de video.
+    </video>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Reforestación Urbana. Plantando conciencia, cosechando futuro.</p>
+</footer>
+
 </body>
 </html>
+<script src="script.js"></script>
